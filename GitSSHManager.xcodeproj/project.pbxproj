@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		7E7AD3B42A54005D0009AB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3B32A54005D0009AB69 /* AppDelegate.swift */; };
-		7E7AD3B62A54005D0009AB69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3B52A54005D0009AB69 /* ViewController.swift */; };
+		7E7AD3B62A54005D0009AB69 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3B52A54005D0009AB69 /* HomeViewController.swift */; };
 		7E7AD3B92A54005D0009AB69 /* GitSSHManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3B72A54005D0009AB69 /* GitSSHManager.xcdatamodeld */; };
 		7E7AD3BB2A54005F0009AB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7AD3BA2A54005F0009AB69 /* Assets.xcassets */; };
 		7E7AD3BE2A54005F0009AB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7AD3BC2A54005F0009AB69 /* Main.storyboard */; };
+		7E7AD3C92A541FD80009AB69 /* AddProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3C82A541FD80009AB69 /* AddProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E7AD3B02A54005D0009AB69 /* GitSSHManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSSHManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7AD3B32A54005D0009AB69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E7AD3B52A54005D0009AB69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E7AD3B52A54005D0009AB69 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E7AD3B82A54005D0009AB69 /* GitSSHManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitSSHManager.xcdatamodel; sourceTree = "<group>"; };
 		7E7AD3BA2A54005F0009AB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E7AD3BD2A54005F0009AB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E7AD3BF2A54005F0009AB69 /* GitSSHManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitSSHManager.entitlements; sourceTree = "<group>"; };
+		7E7AD3C82A541FD80009AB69 /* AddProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		7E7AD3B22A54005D0009AB69 /* GitSSHManager */ = {
 			isa = PBXGroup;
 			children = (
-				7E7AD3B32A54005D0009AB69 /* AppDelegate.swift */,
-				7E7AD3B52A54005D0009AB69 /* ViewController.swift */,
-				7E7AD3BA2A54005F0009AB69 /* Assets.xcassets */,
-				7E7AD3BC2A54005F0009AB69 /* Main.storyboard */,
+				7E7AD3C72A540B6A0009AB69 /* ViewController */,
 				7E7AD3BF2A54005F0009AB69 /* GitSSHManager.entitlements */,
-				7E7AD3B72A54005D0009AB69 /* GitSSHManager.xcdatamodeld */,
+				7E7AD3C62A5400E40009AB69 /* Storyboard */,
+				7E7AD3C52A5400C80009AB69 /* Application */,
 			);
 			path = GitSSHManager;
+			sourceTree = "<group>";
+		};
+		7E7AD3C52A5400C80009AB69 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7E7AD3B32A54005D0009AB69 /* AppDelegate.swift */,
+				7E7AD3BA2A54005F0009AB69 /* Assets.xcassets */,
+				7E7AD3B72A54005D0009AB69 /* GitSSHManager.xcdatamodeld */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7E7AD3C62A5400E40009AB69 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7E7AD3BC2A54005F0009AB69 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7E7AD3C72A540B6A0009AB69 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E7AD3B52A54005D0009AB69 /* HomeViewController.swift */,
+				7E7AD3C82A541FD80009AB69 /* AddProfileViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7AD3B92A54005D0009AB69 /* GitSSHManager.xcdatamodeld in Sources */,
-				7E7AD3B62A54005D0009AB69 /* ViewController.swift in Sources */,
+				7E7AD3B62A54005D0009AB69 /* HomeViewController.swift in Sources */,
+				7E7AD3C92A541FD80009AB69 /* AddProfileViewController.swift in Sources */,
 				7E7AD3B42A54005D0009AB69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
