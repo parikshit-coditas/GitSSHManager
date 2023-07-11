@@ -10,6 +10,8 @@ import Cocoa
 class AddProfileViewController: NSViewController {
     
     @IBOutlet weak var fieldSSHKeyPath: NSTextField!
+    @IBOutlet weak var fieldEmailAddress: NSTextField!
+    @IBOutlet weak var fieldUsername: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,6 @@ class AddProfileViewController: NSViewController {
         
         openPanel.begin { (result) in
             if result == .OK, let url = openPanel.urls.first {
-                // Handle the selected file URL
                 self.handleSelectedFileURL(url)
             }
         }
@@ -36,10 +37,61 @@ class AddProfileViewController: NSViewController {
         fieldSSHKeyPath.stringValue = filePath
     }
     
+    @IBAction func btnAddProfileClick(_ sender: Any) {
+        let sshKeyPath = fieldSSHKeyPath.stringValue
+        let emailAddress = fieldEmailAddress.stringValue
+        let username = fieldUsername.stringValue
+        
+        if sshKeyPath.isEmpty || emailAddress.isEmpty || username.isEmpty {
+            displayErrorDialog()
+        } else {
+            addProfile()
+        }
+    }
     
     @IBAction func btnBack(_ sender: Any) {
-        guard let storyboard = self.storyboard else { return }
-        guard let nextViewController = storyboard.instantiateController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
-        self.view.window?.contentViewController = nextViewController
+        navigateToProfileViewController()
     }
+    
+    private func addProfile(){
+        let realmManager = RealmManager.shared
+        let gitProfile = GitProfile()
+        gitProfile.userName = fieldUsername.stringValue
+        gitProfile.userEmail = fieldEmailAddress.stringValue
+        gitProfile.sshProfilePath = fieldSSHKeyPath.stringValue
+        
+        realmManager.addObject(gitProfile)
+        displaySuccessDialog()
+        
+    }
+    
+    private func displayErrorDialog() {
+        let alert = NSAlert()
+        alert.messageText = "Error"
+        alert.informativeText = "One or more fields are empty."
+        alert.alertStyle = .critical
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
+    }
+    
+    private func displaySuccessDialog(completionHandler: (() -> Void)? = nil) {
+        let alert = NSAlert()
+        alert.messageText = "Profile added successfully"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+        
+        if let window = view.window {
+            alert.beginSheetModal(for: window) { (response) in
+                self.navigateToProfileViewController()
+            }
+        } else {
+            alert.runModal()
+            completionHandler?()
+        }
+    }
+    
+    private func navigateToProfileViewController() {
+        NavigationManager.shared.showProfileViewController()
+    }
+    
 }
