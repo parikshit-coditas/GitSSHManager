@@ -153,7 +153,7 @@ func createBashScript(userName: String, userEmail: String, sshPath: String) {
     
     let scriptContent = """
     #!/bin/bash
-    
+    ssh-add -D
     git config --global user.name "\(userName)"
     git config --global user.email "\(userEmail)"
     ssh-add \(sshPath)

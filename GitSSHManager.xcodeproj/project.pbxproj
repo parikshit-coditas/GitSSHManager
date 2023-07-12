@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBA7D222A5D58F900E24306 /* Navigation */,
-				7EF7BD1C2A5BDADA00289107 /* Core Data */,
+				7EF7BD1C2A5BDADA00289107 /* Database */,
 				7ECDFE512A568AD700DDD430 /* Data Model */,
 				7E7AD3C72A540B6A0009AB69 /* ViewController */,
 				7E7AD3BF2A54005F0009AB69 /* GitSSHManager.entitlements */,
@@ -125,13 +125,13 @@
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
-		7EF7BD1C2A5BDADA00289107 /* Core Data */ = {
+		7EF7BD1C2A5BDADA00289107 /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				7E79E0E82A5C06A5005D7C99 /* SSHProfile.swift */,
 				7E79E0EA2A5C073A005D7C99 /* RealmManager.swift */,
 			);
-			path = "Core Data";
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,9 +360,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Git SSH Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -385,9 +388,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Git SSH Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

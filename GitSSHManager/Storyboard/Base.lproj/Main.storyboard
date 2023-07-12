@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="XPV-kG-7u2">
-                                <rect key="frame" x="760" y="224.5" width="26.5" height="30"/>
+                                <rect key="frame" x="760" y="112.5" width="26.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="qkc-AY-3DK"/>
                                     <constraint firstAttribute="width" constant="26" id="x8y-Gh-ahU"/>
@@ -217,13 +217,13 @@
                                 </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="59" horizontalPageScroll="10" verticalLineScroll="59" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCX-YY-Ej2">
-                                <rect key="frame" x="24" y="24" width="750" height="178"/>
+                                <rect key="frame" x="24" y="24" width="750" height="66"/>
                                 <clipView key="contentView" drawsBackground="NO" id="78B-pc-Nxe">
-                                    <rect key="frame" x="1" y="1" width="748" height="176"/>
+                                    <rect key="frame" x="1" y="1" width="748" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="59" rowSizeStyle="automatic" headerView="1WN-6W-1dr" viewBased="YES" id="zOP-bb-KaP">
-                                            <rect key="frame" x="0.0" y="0.0" width="748" height="148"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="748" height="36"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -303,10 +303,10 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="7vr-yN-xCb">
-                                    <rect key="frame" x="1" y="413" width="748" height="16"/>
+                                    <rect key="frame" x="1" y="161" width="748" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eN0-Q3-CIP">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="eN0-Q3-CIP">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
