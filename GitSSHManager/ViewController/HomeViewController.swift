@@ -19,6 +19,10 @@ class HomeViewController: NSViewController {
     }
 
     @IBAction func btnAddProfile(_ sender: Any) {
+        navigateToAddProfileViewController()
+    }
+    
+    private func navigateToAddProfileViewController() {
         NavigationManager.shared.showAddProfileViewController()
     }
 }

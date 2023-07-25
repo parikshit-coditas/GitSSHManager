@@ -157,10 +157,21 @@
                                     <action selector="btnAddProfileClick:" target="Ooi-WM-hSO" id="HLy-My-e8M"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-Nd-avM">
+                                <rect key="frame" x="841" y="553" width="146" height="32"/>
+                                <buttonCell key="cell" type="push" title="Generate SSH Key" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xmd-Tl-11Y">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="onClickGenerateSSH:" target="Ooi-WM-hSO" id="me8-fT-JTY"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="roc-sx-PF4" firstAttribute="leading" secondItem="9aA-0g-QZA" secondAttribute="trailing" constant="24" id="2Ma-Ql-CBR"/>
                             <constraint firstItem="Hqr-Je-acT" firstAttribute="top" secondItem="UOT-d0-0Pz" secondAttribute="top" constant="56" id="4tS-LR-yjf"/>
+                            <constraint firstItem="ahG-Nd-avM" firstAttribute="top" secondItem="Os5-6N-V03" secondAttribute="top" constant="20" symbolic="YES" id="AT8-iS-HQM"/>
                             <constraint firstItem="Hqr-Je-acT" firstAttribute="leading" secondItem="UOT-d0-0Pz" secondAttribute="leading" constant="56" id="B2l-Hz-KXH"/>
                             <constraint firstItem="YdK-lK-ecs" firstAttribute="centerX" secondItem="UOT-d0-0Pz" secondAttribute="centerX" id="Cin-f2-MQn"/>
                             <constraint firstItem="2Ex-b0-cR1" firstAttribute="leading" secondItem="Os5-6N-V03" secondAttribute="leading" constant="12" id="Ejg-YL-6qW"/>
@@ -172,6 +183,7 @@
                             <constraint firstItem="Q9y-td-mUu" firstAttribute="top" secondItem="roc-sx-PF4" secondAttribute="bottom" constant="26" id="VCL-76-axu"/>
                             <constraint firstItem="UOT-d0-0Pz" firstAttribute="trailing" secondItem="28J-vz-aTk" secondAttribute="trailing" constant="56" id="VaP-Q6-5vm"/>
                             <constraint firstItem="28J-vz-aTk" firstAttribute="top" secondItem="UOT-d0-0Pz" secondAttribute="top" constant="56" id="WZM-FR-O4s"/>
+                            <constraint firstAttribute="trailing" secondItem="ahG-Nd-avM" secondAttribute="trailing" constant="20" symbolic="YES" id="cw7-TA-P11"/>
                             <constraint firstItem="UOT-d0-0Pz" firstAttribute="trailing" secondItem="jkg-TS-EQY" secondAttribute="trailing" constant="56" id="ega-Qg-6Un"/>
                             <constraint firstItem="8xd-At-Tr5" firstAttribute="leading" secondItem="UOT-d0-0Pz" secondAttribute="leading" constant="56" id="evx-2c-ZN8"/>
                             <constraint firstItem="28J-vz-aTk" firstAttribute="leading" secondItem="Hqr-Je-acT" secondAttribute="trailing" constant="24" id="jgm-fg-BDY"/>
@@ -337,7 +349,7 @@
         <scene sceneID="dAj-xa-EOM">
             <objects>
                 <windowController id="0HJ-9N-1rC" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="3oI-T6-LWv">
+                    <window key="window" title="Git SSH Manager" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="3oI-T6-LWv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="34" y="1224" width="480" height="270"/>
@@ -736,6 +748,112 @@
                 <customObject id="veK-91-0Ql" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1004" y="46"/>
+        </scene>
+        <!--GenerateSSH Key View Controller-->
+        <scene sceneID="pgh-kp-EDn">
+            <objects>
+                <viewController storyboardIdentifier="GenerateSSHKeyViewController" id="DAp-MC-LmH" customClass="GenerateSSHKeyViewController" customModule="GitSSHManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m86-bM-zZ6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ISv-cF-8dx">
+                                <rect key="frame" x="24" y="556" width="18" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="hcF-as-8lg"/>
+                                    <constraint firstAttribute="width" constant="18" id="yBO-jS-Jz2"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSGoBackTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Cud-l3-tgo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onClickBack:" target="DAp-MC-LmH" id="zaW-BH-V6M"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zRb-HT-zOp">
+                                <rect key="frame" x="22" y="486" width="154" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Enter your email address" id="w8N-TU-azg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lsQ-mH-exQ">
+                                <rect key="frame" x="230" y="481" width="746" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Enter you Github email address" drawsBackground="YES" id="XfY-Pa-iAq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9FU-2E-mfj">
+                                <rect key="frame" x="443" y="32" width="114" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Lmg-Vd-cFB"/>
+                                    <constraint firstAttribute="width" constant="100" id="MSW-Tq-TCX"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Add SSH Key" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WTk-d6-Zmd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onCLickAddSSHKey:" target="DAp-MC-LmH" id="ATR-dR-NUs"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LW5-eh-oL6">
+                                <rect key="frame" x="22" y="442" width="122" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Enter ssh key name" id="71N-du-jIj">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S30-Bb-gTp">
+                                <rect key="frame" x="230" y="436" width="746" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Enter name for your ssh key (no space)" drawsBackground="YES" id="HVs-hE-8zq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2M3-o7-VsS">
+                                <rect key="frame" x="22" y="115" width="956" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" placeholderString="Your ssh will be saved in location: ~/.ssh/id_{your_ssh_key_name}.sh" id="MpU-Bx-yUB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zRb-HT-zOp" firstAttribute="leading" secondItem="m86-bM-zZ6" secondAttribute="leading" constant="24" id="4YZ-aT-J4A"/>
+                            <constraint firstAttribute="trailing" secondItem="lsQ-mH-exQ" secondAttribute="trailing" constant="24" id="9Ms-vn-JaT"/>
+                            <constraint firstItem="S30-Bb-gTp" firstAttribute="leading" secondItem="lsQ-mH-exQ" secondAttribute="leading" id="AKJ-KO-4yK"/>
+                            <constraint firstItem="ISv-cF-8dx" firstAttribute="leading" secondItem="m86-bM-zZ6" secondAttribute="leading" constant="24" id="J75-6i-kgy"/>
+                            <constraint firstAttribute="bottom" secondItem="9FU-2E-mfj" secondAttribute="bottom" constant="39" id="PHU-9G-DBk"/>
+                            <constraint firstItem="LW5-eh-oL6" firstAttribute="top" secondItem="zRb-HT-zOp" secondAttribute="bottom" constant="28" id="Pft-bK-8Ga"/>
+                            <constraint firstItem="S30-Bb-gTp" firstAttribute="trailing" secondItem="lsQ-mH-exQ" secondAttribute="trailing" id="Suf-RN-p6G"/>
+                            <constraint firstItem="lsQ-mH-exQ" firstAttribute="leading" secondItem="zRb-HT-zOp" secondAttribute="trailing" constant="56" id="TPQ-Rq-r8w"/>
+                            <constraint firstItem="2M3-o7-VsS" firstAttribute="leading" secondItem="m86-bM-zZ6" secondAttribute="leading" constant="24" id="UpT-6N-A8D"/>
+                            <constraint firstItem="lsQ-mH-exQ" firstAttribute="top" secondItem="zRb-HT-zOp" secondAttribute="top" id="bfI-ED-LvW"/>
+                            <constraint firstItem="9FU-2E-mfj" firstAttribute="top" secondItem="2M3-o7-VsS" secondAttribute="bottom" constant="56" id="exj-pU-JfW"/>
+                            <constraint firstItem="ISv-cF-8dx" firstAttribute="top" secondItem="m86-bM-zZ6" secondAttribute="top" constant="24" id="ll5-mu-4GG"/>
+                            <constraint firstItem="9FU-2E-mfj" firstAttribute="centerX" secondItem="m86-bM-zZ6" secondAttribute="centerX" id="pMN-de-4Es"/>
+                            <constraint firstAttribute="trailing" secondItem="2M3-o7-VsS" secondAttribute="trailing" constant="24" id="pgs-hO-5yf"/>
+                            <constraint firstItem="S30-Bb-gTp" firstAttribute="top" secondItem="lsQ-mH-exQ" secondAttribute="bottom" constant="24" id="qfu-Rz-75O"/>
+                            <constraint firstItem="zRb-HT-zOp" firstAttribute="top" secondItem="ISv-cF-8dx" secondAttribute="bottom" constant="56" id="w7z-y7-Qnp"/>
+                            <constraint firstItem="LW5-eh-oL6" firstAttribute="leading" secondItem="m86-bM-zZ6" secondAttribute="leading" constant="24" id="zVe-0Z-7mT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputFieldEmailAddress" destination="lsQ-mH-exQ" id="PEg-At-2A0"/>
+                        <outlet property="inputFieldSSHName" destination="S30-Bb-gTp" id="Gwg-0a-VAd"/>
+                    </connections>
+                </viewController>
+                <customObject id="OK8-3a-W4f" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="1806"/>
         </scene>
     </scenes>
     <resources>

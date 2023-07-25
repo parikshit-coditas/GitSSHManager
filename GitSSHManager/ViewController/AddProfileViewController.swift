@@ -13,6 +13,8 @@ class AddProfileViewController: NSViewController {
     @IBOutlet weak var fieldEmailAddress: NSTextField!
     @IBOutlet weak var fieldUsername: NSTextField!
     
+    let navigationManager = NavigationManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fieldSSHKeyPath.isEditable = false
@@ -47,6 +49,10 @@ class AddProfileViewController: NSViewController {
         } else {
             addProfile()
         }
+    }
+    
+    @IBAction func onClickGenerateSSH(_ sender: Any) {
+        navigateToGenerateSSHViewController()
     }
     
     @IBAction func btnBack(_ sender: Any) {
@@ -91,7 +97,11 @@ class AddProfileViewController: NSViewController {
     }
     
     private func navigateToProfileViewController() {
-        NavigationManager.shared.showProfileViewController()
+        navigationManager.showProfileViewController()
+    }
+    
+    private func navigateToGenerateSSHViewController() {
+        navigationManager.showGenerateSSHViewController()
     }
     
 }

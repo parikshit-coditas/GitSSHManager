@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E0DD4152A5C170500FC0BF7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7E0DD4142A5C170500FC0BF7 /* Realm */; };
 		7E0DD4172A5C170500FC0BF7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7E0DD4162A5C170500FC0BF7 /* RealmSwift */; };
+		7E2AD3052A6FC41B0086ADF9 /* GenerateSSHKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD3042A6FC41B0086ADF9 /* GenerateSSHKeyViewController.swift */; };
 		7E79E0E92A5C06A5005D7C99 /* SSHProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E79E0E82A5C06A5005D7C99 /* SSHProfile.swift */; };
 		7E79E0EB2A5C073A005D7C99 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E79E0EA2A5C073A005D7C99 /* RealmManager.swift */; };
 		7E7AD3B42A54005D0009AB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7AD3B32A54005D0009AB69 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E2AD3042A6FC41B0086ADF9 /* GenerateSSHKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateSSHKeyViewController.swift; sourceTree = "<group>"; };
 		7E79E0E82A5C06A5005D7C99 /* SSHProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHProfile.swift; sourceTree = "<group>"; };
 		7E79E0EA2A5C073A005D7C99 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		7E7AD3B02A54005D0009AB69 /* GitSSHManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSSHManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				7E7AD3B52A54005D0009AB69 /* HomeViewController.swift */,
 				7E7AD3C82A541FD80009AB69 /* AddProfileViewController.swift */,
 				7ECDFE542A568B6C00DDD430 /* ProfileViewController.swift */,
+				7E2AD3042A6FC41B0086ADF9 /* GenerateSSHKeyViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2AD3052A6FC41B0086ADF9 /* GenerateSSHKeyViewController.swift in Sources */,
 				7ECDFE552A568B6C00DDD430 /* ProfileViewController.swift in Sources */,
 				7E79E0EB2A5C073A005D7C99 /* RealmManager.swift in Sources */,
 				7EBA7D242A5D590600E24306 /* NavigationManager.swift in Sources */,

@@ -35,4 +35,10 @@ class NavigationManager {
         guard let homeViewController = storyboard.instantiateController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
         NSApplication.shared.windows.first?.contentViewController = homeViewController
     }
+    
+    func showGenerateSSHViewController() {
+        guard let storyboard = storyboard else { return }
+        guard let homeViewController = storyboard.instantiateController(withIdentifier: "GenerateSSHKeyViewController") as? GenerateSSHKeyViewController else { return }
+        NSApplication.shared.windows.first?.contentViewController = homeViewController
+    }
 }
