@@ -215,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="XPV-kG-7u2">
-                                <rect key="frame" x="760" y="560.5" width="26.5" height="30"/>
+                                <rect key="frame" x="760" y="504.5" width="26.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="qkc-AY-3DK"/>
                                     <constraint firstAttribute="width" constant="26" id="x8y-Gh-ahU"/>
@@ -229,13 +229,13 @@
                                 </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="59" horizontalPageScroll="10" verticalLineScroll="59" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCX-YY-Ej2">
-                                <rect key="frame" x="24" y="24" width="750" height="514"/>
+                                <rect key="frame" x="24" y="24" width="750" height="458"/>
                                 <clipView key="contentView" drawsBackground="NO" id="78B-pc-Nxe">
-                                    <rect key="frame" x="1" y="1" width="748" height="512"/>
+                                    <rect key="frame" x="1" y="1" width="748" height="456"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="59" rowSizeStyle="automatic" headerView="1WN-6W-1dr" viewBased="YES" id="zOP-bb-KaP">
-                                            <rect key="frame" x="0.0" y="0.0" width="748" height="484"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="748" height="428"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -315,7 +315,7 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="7vr-yN-xCb">
-                                    <rect key="frame" x="1" y="50" width="748" height="15"/>
+                                    <rect key="frame" x="1" y="497" width="748" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="eN0-Q3-CIP">
@@ -819,7 +819,7 @@
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2M3-o7-VsS">
                                 <rect key="frame" x="22" y="115" width="956" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" placeholderString="Your ssh will be saved in location: ~/.ssh/id_{your_ssh_key_name}.sh" id="MpU-Bx-yUB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" placeholderString="Your ssh will be saved in location: ~/.ssh/id_{your_ssh_key_name}" id="MpU-Bx-yUB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -77,6 +77,7 @@ class GenerateSSHKeyViewController: NSViewController {
         eval "$(ssh-agent -s)"
         ssh-add "$SSH_KEY_PATH"
         cat "$SSH_KEY_PATH.pub"
+        open -a TextEdit ~/.ssh/id_\(sshName).pub
         """
         
         let fileManager = FileManager.default
